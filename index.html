@@ -12,15 +12,14 @@
     <!-- Arquivo de redefinição de estilos -->
     <link rel="stylesheet" href="reset.css">
 
-    <!-- Estilos da página -->
     <style>
-
         /* Configuração geral */
         body {
             font-family: Arial, sans-serif;
             background-color: #f5f5f5;
             margin: 0;
             padding: 20px;
+            color: #222;
         }
 
         /* Cabeçalho */
@@ -30,13 +29,13 @@
         }
 
         header h1 {
-            color: blue;
-            font-size: 25px;
+            font-size: 28px;
             margin-bottom: 15px;
         }
 
         header p {
             font-size: 18px;
+            line-height: 1.6;
         }
 
         /* Organização das colunas */
@@ -63,19 +62,19 @@
             margin-bottom: 15px;
         }
 
-        /* Estilo exclusivo de Filmes */
+        /* Filmes */
         .filmes {
             background-color: #dbeafe;
             border: 2px solid #2563eb;
         }
 
-        /* Estilo exclusivo de Músicas */
+        /* Músicas */
         .musicas {
             background-color: #dcfce7;
             border: 2px solid #16a34a;
         }
 
-        /* Estilo exclusivo de Games */
+        /* Games */
         .games {
             background-color: #f3e8ff;
             border: 2px solid #9333ea;
@@ -88,14 +87,31 @@
             height: 200px;
             object-fit: cover;
             border-radius: 8px;
-
-            /* Transição suave */
             transition: transform 0.5s ease;
         }
 
-        /* Efeito de ampliação de 5% */
+        /* Ampliação de 5% */
         .coluna img:hover {
             transform: scale(1.05);
+        }
+
+        /* Textos explicativos */
+        .descricao {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-top: 15px;
+        }
+
+        /* Créditos das imagens */
+        .credito {
+            font-size: 12px;
+            margin-top: 12px;
+            line-height: 1.5;
+        }
+
+        .credito a {
+            color: #174ea6;
+            overflow-wrap: anywhere;
         }
 
         /* Rodapé */
@@ -103,6 +119,7 @@
             text-align: center;
             margin-top: 40px;
             font-size: 14px;
+            line-height: 1.6;
         }
 
         footer a {
@@ -114,18 +131,36 @@
             text-decoration: underline;
         }
 
-    </style>
+        /* Ajustes para dispositivos móveis */
+        @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
 
+            header h1 {
+                font-size: 24px;
+            }
+
+            .coluna {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
     <!-- Cabeçalho principal -->
     <header>
-        <h1>Portal de Entretenimentos</h1>
+        <h1 style="color: blue;">
+            Portal de Entretenimentos
+        </h1>
+
         <p>
-            Minhas preferências em matéria
-            de entretenimento
+            Conheça minhas preferências em filmes,
+            séries, músicas, podcasts, games
+            e tecnologias.
         </p>
     </header>
 
@@ -138,11 +173,23 @@
             <h2>Filmes e Séries</h2>
 
             <img src="filmes.png"
-                 alt="Imagem de filmes e séries">
+                 alt="Imagem ilustrativa da seção
+                 de filmes e séries"
+                 loading="lazy">
 
             <p class="descricao">
-               Explore filmes e séries incríveis
-               para todos os gostos.
+                O cinema e as séries proporcionam
+                entretenimento, cultura e conhecimento.
+                Nesta seção, apresento meu interesse
+                por produções cinematográficas,
+                histórias envolventes e diferentes
+                gêneros audiovisuais.
+            </p>
+
+            <p class="credito">
+                Fonte da imagem:
+                Imagem gerada pela
+                IA - ChatGPT .
             </p>
 
         </section>
@@ -152,12 +199,25 @@
 
             <h2>Músicas e Podcasts</h2>
 
-            <img src="musicas.png"
-                 alt="Imagem de músicas e podcasts">
+            <img src="musicas.jfif"
+                 alt="Imagem ilustrativa sobre
+                 músicas e podcasts"
+                 loading="lazy">
 
             <p class="descricao">
-                Descubra músicas e podcasts
-                para inspirar seu dia.
+                A música está presente em diferentes
+                momentos da vida, proporcionando
+                inspiração e bem-estar.
+                Os podcasts também representam
+                uma excelente oportunidade
+                de aprendizado, informação
+                e entretenimento.
+            </p>
+
+            <p class="credito">
+                Fonte da imagem:
+                Imagem gerada pela
+                IA - ChatGPT .
             </p>
 
         </section>
@@ -168,11 +228,23 @@
             <h2>Games e Tecnologias</h2>
 
             <img src="jogos.png"
-                 alt="Imagem de games e tecnologias">
+                 alt="Imagem ilustrativa de jogos
+                 eletrônicos e tecnologias digitais"
+                 loading="lazy">
 
             <p class="descricao">
-               Conheça jogos, novidades
-               e tendências tecnológicas.
+                Os jogos eletrônicos combinam
+                criatividade, estratégia e inovação.
+                Nesta seção, destaco meu interesse
+                pelo universo dos games, pelas
+                novas tecnologias e pelas
+                transformações digitais.
+            </p>
+
+            <p class="credito">
+                Fonte da imagem:
+                Imagem gerada pela
+                IA - ChatGPT.
             </p>
 
         </section>
@@ -183,12 +255,18 @@
     <footer>
 
         <p>
-            Fonte das imagens:
-            <a href="https://www.google.com.br"
-               target="_blank"
-               rel="noopener noreferrer">
-                Google Images
-            </a>
+            Portal de Entretenimentos
+        </p>
+
+        <p>
+            Projeto desenvolvido para fins
+            educacionais, utilizando HTML5 e CSS3.
+        </p>
+
+        <p>
+            Créditos das imagens apresentados
+            individualmente em cada seção,
+            após confirmação das fontes originais.
         </p>
 
     </footer>
